@@ -1,10 +1,17 @@
-// init
-if (!window.hasScreenCapturePage) {
-    window.hasScreenCapturePage = true;
-    getPositions(self.init);
+var CAPTURE_DELAY = 150;
+
+function onMessage(data, sender, callback) {
+    if (data.msg === 'scrollPage') {
+        getPositions(callback);
+        return true;
+    }
 }
 
-// utils
+if (!window.hasScreenCapturePage) {
+    window.hasScreenCapturePage = true;
+    chrome.runtime.onMessage.addListener(onMessage);
+}
+
 function max(nums) {
     return Math.max.apply(Math, nums.filter(function(x) { return x; }));
 }
@@ -128,6 +135,6 @@ function getPositions(callback) {
                 }
             });
 
-        }, 150);
+        }, CAPTURE_DELAY);
     })();
 }

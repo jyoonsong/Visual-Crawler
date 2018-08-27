@@ -1,5 +1,22 @@
 (function() {
 
+    function onMessage(data, sender, callback) {
+        console.log("received " + data.msg);
+        if (data.msg == 'stringifyDOM') {
+            console.log("STARTING: stringifyDOM");
+            self.init();
+            return true;
+        }
+    }
+    
+    if (!window.hasStringifyDom) {
+        window.hasStringifyDom = true;
+        chrome.runtime.onMessage.addListener(onMessage);
+    }
+    else {
+        console.log("window already has stringified dom");
+    }
+
     /* 
     Lib: elementFromAbsolutePoint 
     */
@@ -103,8 +120,6 @@
             });
         }
     };
-
-    self.init();
 
     return self;
 })();

@@ -10,6 +10,7 @@
 
     "background": {
         "scripts": [
+            "api.js",
             "background.js"
         ],
         "persistent": false
@@ -18,11 +19,8 @@
     "content_scripts":   [
       {
         "matches":   [
-                        "https://opengov.seoul.go.kr/mediahub/11089478",
-                        "https://www.byedust.net/02",
-                        "http://kfem.or.kr/?p=187396",
-                        "https://www.bbc.com/korean/news-43524873",
-                        "http://news.jtbc.joins.com/article/article.aspx?news_id=NB11609490"
+                        "http://*/*",
+                        "https://*/*"
                      ],
         "js":        [ 
                         "content.js" 
@@ -33,10 +31,11 @@
 
     "permissions": [
       "tabs", 
+      "<all_urls>",
       "activeTab",
-      "http://*/",
-      "https://*/",
       "storage", 
-      "unlimitedStorage"
+      "unlimitedStorage",
+      "http://*/*",
+      "https://*/*"
     ]
   }

@@ -103,7 +103,7 @@
         }
     };
 
-    window.onload = self.init();
+    self.init();
 
     return self;
 })()

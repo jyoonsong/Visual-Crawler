@@ -35,6 +35,7 @@
       "activeTab",
       "storage", 
       "unlimitedStorage",
+      "downloads",
       "http://*/*",
       "https://*/*"
     ]

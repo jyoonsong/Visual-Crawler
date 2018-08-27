@@ -24,13 +24,18 @@
                         "https://www.bbc.com/korean/news-43524873",
                         "http://news.jtbc.joins.com/article/article.aspx?news_id=NB11609490"
                      ],
-        "js":        [ "content.js" ],
+        "js":        [ 
+                        "content.js" 
+                     ],
         "run_at":    "document_idle"
       }
     ],
 
     "permissions": [
       "tabs", 
+      "activeTab",
+      "http://*/",
+      "https://*/",
       "storage", 
       "unlimitedStorage"
     ]

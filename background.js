@@ -19,6 +19,9 @@ chrome.runtime.onMessage.addListener(
         data.push( request );
         sendResponse({success: true});
 
+        if (index == urls.length)
+            return;
+
         chrome.tabs.update(sender.tab.id, {url: urls[++index]}, function(tab) {
             console.log("updated to " + tab.url);
         });

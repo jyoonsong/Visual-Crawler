@@ -117,7 +117,11 @@ function exportData() {
                            chrome.i18n.getMessage('@@extension_id') +
                            '/temporary/' + filename);
 
-            console.log(urlName);
+            chrome.downloads.download({
+                url: urlName,
+                conflictAction : 'uniquify',
+                saveAs: false
+            });
         }
 
         reqFileSystem(window.TEMPORARY, size, function(fs){
@@ -137,9 +141,9 @@ function exportData() {
             url: file[0],
             conflictAction : 'uniquify',
             saveAs: false
-        }, function() {
-            alert("COMPLETE");
         });
+    }, function() {
+        alert("COMPLETE");
     });
 }
 

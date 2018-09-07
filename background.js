@@ -1,75 +1,112 @@
 const   urls = [
-                "https://opengov.seoul.go.kr/mediahub/11089478",
-                "http://shindonga.donga.com/3/all/13/1295330/1"
-                // "http://kfem.or.kr/?p=187396",
-                // "https://www.bbc.com/korean/news-43524873",
-                // "http://news.jtbc.joins.com/article/article.aspx?news_id=NB11609490",
-                // "http://www.monews.co.kr/news/articleView.html?idxno=114666",
-                // "http://jkjtv.kr/%EC%84%9C%EC%9A%B8%EC%8B%9C%EC%9D%98-%EC%9D%B4%EC%83%81%ED%95%9C-%EB%AF%B8%EC%84%B8%EB%A8%BC%EC%A7%80-%EB%8C%80%EC%B1%85%EB%B0%95%EC%84%9D%EC%88%9C-%EA%B5%90%EC%88%98%EC%9D%98-%EC%A7%84%EC%A7%9C/",
-                // "http://techm.kr/bbs/board.php?bo_table=article&wr_id=3967",
-                // "http://www.medipana.com/news/news_viewer.asp?NewsNum=220098&MainKind=A&NewsKind=5&vCount=12&vKind=1",
-                // "books.google.co.kr/books?id=qYU0DwAAQBAJ&pg=PT33&lpg=PT33&dq=미세먼지+대비책&source=bl&ots=6M3O0u2OKd&sig=tDsh4-vufMLWOgZMxLNB7VVEtZk&hl=ko",
-                // "https://news.joins.com/article/21860676",
-                // "http://biz.chosun.com/site/data/html_dir/2017/08/18/2017081801505.html",
-                // "https://www.huffingtonpost.kr/2017/08/21/story_n_17794862.html",
-                // "http://www.hankookilbo.com/v/65436643715042099ec59b0384c5e835",
-                // "http://www.sisapress.com/journal/article/170925",
-                // "http://www.gnmaeil.com/news/articleView.html?idxno=350144",
-                // "http://www.sisajournal-e.com/biz/article/187111",
-                // "http://v.media.daum.net/v/20170816141016383",
-                // "http://www.hitnews.co.kr/news/articleList.html?page=7&total=565&sc_section_code=S1N1&sc_sub_section_code=&sc_serial_code=&sc_area=&sc_level=&sc_article_type=&sc_view_level=&sc_sdate=&sc_edate=&sc_serial_number=&sc_word=&sc_word2=&sc_andor=&sc_order_by=E&view_type=sm",
-                // "http://wpalss.tistory.com/tag",
-                // "https://banksalad.com/contents/가상화폐-개념-완벽-정리-A-to-Z-1부-WYTtp",
-                // "https://steemit.com/kr/@kim066/4urqt9-part-1",
-                // "http://bryan.wiki/167",
-                // "http://www.mobiinside.com/kr/2017/03/20/blockchain_1-2/",
-                // "http://imnews.imbc.com/replay/2018/nwdesk/article/4501645_22663.html",
-                // "https://ggclip.com/video/3uRNaxfK_1s/%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8-part-2-%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8%EC%9D%98-%EC%9B%90%EB%A6%AC-feat-%ED%95%B4%EC%8B%9C-4%EC%B0%A8%EC%82%B0%EC%97%85%ED%98%81%EB%AA%85%E3%85%A3%EB%B6%81%EC%8A%A4%ED%86%A0%EB%9E%91-book'staurant.html",
-                // "http://www.kinews.net/news/articleView.html?idxno=71193",
-                // "http://samsung.dkyobobook.co.kr/Kyobo_T3/Content/ebook/ebook_View.asp?barcode=4808957821220&product_cd=001&category_id=021303",
-                // "http://news.donga.com/3/all/20010727/7719949/1",
-                // "http://www.cryptocoin.kr/entry/%EB%A7%88%EC%9D%B4%EB%8B%9D%ED%92%80-%ED%97%88%EB%B8%8C-%EB%A9%80%ED%8B%B0%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%B1%84%EA%B5%B4%EC%84%A4%EC%A0%95-9%EB%8B%A8%EA%B3%84-Ethash-Equihash",
-                // "https://twitter.com/hashtag/방탄소년단컴백",
-                // "http://www.yonhapnews.co.kr/bulletin/2018/04/17/0200000000AKR20180417028000005.HTML",
-                // "https://www.huffingtonpost.kr/entry/bts-new-album_kr_5afe5782e4b0463cdba03f6d",
-                // "http://www.nocutnews.co.kr/news/4974463",
-                // "http://www.nocutnews.co.kr/news/4955614",
-                // "http://www.vlive.tv/video/81944/%EC%B2%AB-%EA%B9%9C%EC%A7%9D-%EB%9D%BC%EC%9D%B4%EB%B8%8C%E2%99%A1-%EB%A6%AC%EC%96%BC%EB%A6%AC%ED%8B%B0-%EB%B3%B4%EC%85%A8%EB%82%98%EC%9A%94",
-                // "http://www.sportsseoul.com/news/read/662538",
-                // "https://lemurtube.com/results?search_query=%23%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8%EC%BB%B4%EB%B0%B1%EC%87%BC",
-                // "http://bender-gd.de/1032wwj/jffzoo2.php?fbnaccxif=highlight-eng-sub",
-                // "http://m.fnnews.com/news/201807271247530338",
-                // "http://m.blog.naver.com/fnxmdl334/220927075942",
-                // "https://www.huffingtonpost.kr/2014/10/05/story_n_5934218.html",
-                // "https://www.clien.net/service/board/use/7337559",
-                // "http://massukr.tistory.com/81",
-                // "http://research-paper.co.kr/news/view/47433",
-                // "https://videos.tube/video/acIeWlZZ5bk/-30-",
-                // "https://nhacchobe.net/video/L3iJXBwnc9Y/1-mi-one-vape-review.html",
-                // "http://www.monews.co.kr/news/articleView.html?idxno=105479",
-                // "http://www.newsen.com/news_view.php?uid=201108301430354100",
-                // "http://www.newswire.co.kr/newsRead.php?no=567071",
-                // "https://www.tripadvisor.co.kr/Attractions-g298085-Activities-Da_Nang_Quang_Nam_Province.html",
-                // "https://www.skyscanner.co.kr/news/places-to-visit-in-danang",
-                // "https://triple.guide/regions/22b60e7e-afc7-40e1-9237-8f31ed8a842d/articles/6bb1f9e0-cfda-49af-a40b-7339b3a10ed6",
-                // "https://withvolo.com/trip/r3wvdlr2",
-                // "https://brunch.co.kr/@allstay/270",
-                // "https://www.hyatt.com/ko-KR/hotel/vietnam/hyatt-regency-danang-resort-and-spa/danhr",
-                // "http://previewdeal.wemakeprice.com/deal/adeal/2300639/991800/?source=991800&no=44",
-                // "https://www.wotif.com/Da-Nang-Hotels-Fivitel-Da-Nang.h20144297.Hotel-Information",
-                // "http://www.pictame.com/tag/%EB%8B%A4%EB%82%AD%EB%AA%85%EC%86%8C",
-                // "http://www.10puzzle.com/piece/5757-%EC%86%90%EC%98%A4%EA%B3%B5%EC%9D%B4-%EC%88%98%EB%A0%A8%ED%95%9C-%EB%8B%A4%EB%82%AD%EB%AA%85%EC%86%8C-%EB%A7%88%EB%B8%94%EB%A7%88%EC%9A%B4%ED%8B%B4-%EB%B0%A9%EB%B0%A9%EC%BD%95%EC%BD%95.html"
-                ];
+    // "http://field.incheon.go.kr/posts/2237/590?rnum=3&curPage=1",
+    // "https://www.yeoncheon.go.kr/index.yeoncheon?menuCd=DOM_000000702003004000",
+    // "http://sbscnbc.sbs.co.kr/read.jsp?pmArticleId=10000912688",
+    // "https://www.gyeongnam.go.kr/bangjae/index.gyeong?menuCd=DOM_000000205002002000",
+    // "http://www.yonhapnews.co.kr/bulletin/2016/09/20/0200000000AKR20160920161700073.HTML",
+    // "http://www.itworld.co.kr/news/53411",
+    // "http://news.donga.com/3/all/20090623/8747031/1",
+    // "http://www.hani.co.kr/arti/society/schooling/766099.html",
+    // "https://www.insunet.co.kr/ja/sangsik_cont.asp?sn=943",
+    // "https://www.jeju.go.kr/news/bodo/list.htm?act=view&seq=1113489",
+    // "http://www.safeleader.org/bbs/tb.php/sub42/47",
+    // "http://01048622447.com/bbs/board.php?ca_id=&bo_table=gallery&wr_id=44&sfl=&stx=&sst=wr_datetime&sod=desc&sop=and&page=2",
+    // "http://todayenergy.kr/news/articleView.html?idxno=9798",
+    // "http://www.nocutnews.co.kr/news/5018208",
+    // "http://www.hankookilbo.com/v/489d66fb79e54ae0a3cc9d7c420d1e74",
+    // "http://sky0113.com/157",
+    // "http://hdjungin.tistory.com/entry/%EA%B3%A4%EC%95%BD%EC%9D%98-%EC%98%A4%ED%95%B4%EC%99%80-%EC%A7%84%EC%8B%A4-%EA%B3%A4%EC%95%BD%EC%9D%98-%EA%B2%80%EC%A6%9D%EB%90%9C-%ED%9A%A8%EB%8A%A5-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EB%B6%80%EC%9E%91%EC%9A%A9",
+    // "http://health.chosun.com/site/data/html_dir/2006/01/17/2006011756014.html",
+    // "http://overseas.kuroho.com/korean.html",
+    // "https://matcha-jp.com/ko/2748",
+    // "http://www.venturesquare.net/763587",
+    // "http://news.donga.com/3/all/20150723/72674968/1",
+    // "https://ko.wikipedia.org/wiki/%ED%86%B5%EC%97%AD_%EA%B3%A4%EC%95%BD",
+    // "http://ssoqubae.tistory.com/2071",
+    // "http://bugerbok.tistory.com/325",
+    // "http://byuns.tistory.com/294",
+    // "http://learningnara.tistory.com/entry/%EC%A4%91%EA%B5%AD-%ED%99%A9%EC%A0%9C%EC%9D%98-%EB%B9%84%EB%A7%8C%EC%9D%84-%EC%98%88%EB%B0%A9%ED%95%9C-%EA%B3%A4%EC%95%BD-%ED%9A%A8%EB%8A%A5",
+    // "https://www.instagram.com/p/BjP2Vw-AMsx/",
+    // "http://lodowap.xyz/video/category/%EA%B3%A4%EC%95%BD-%ED%9A%A8%EB%8A%A5.html",
+    // "https://nl.pinterest.com/pin/701224604453646924/",
+    // "https://twitter.com/hashtag/%EA%B3%A4%EC%95%BD%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8?lang=ko",
+    // "https://www.sisain.co.kr/25555",
+    // "http://exem.tistory.com/967",
+    // "https://cpuu.postype.com/post/132269",
+    // "http://leekh7411.tistory.com/1",
+    // "http://www.hani.co.kr/arti/sports/baduk/734495.html",
+    // "http://imnews.imbc.com/replay/2016/nw1800/article/3896746_19830.html",
+    // "https://www.natureasia.com/ko-kr/nature/highlights/89679",
+    // "https://ko.wikipedia.org/wiki/%EC%95%8C%ED%8C%8C%EA%B3%A0",
+    // "http://tmmse.xyz/2016/03/04/alphago/",
+    // "http://hanmin-dev.tistory.com/17",
+    // "http://everyhark.tistory.com/143",
+    // "http://m.blog.naver.com/cbkim53/220652475176",
+    // "http://www.joysf.com/forum_sf/4873038",
+    // "https://librewiki.net/wiki/%EC%95%8C%ED%8C%8C%EA%B3%A0",
+    // "https://byline.network/2016/01/1-49/",
+    // "http://www.hellodatascience.com/?p=673",
+    // "http://news.chosun.com/site/data/html_dir/2015/11/03/2015110302248.html",
+    "http://sports.khan.co.kr/news/sk_index.html?art_id=201705071036003&sec_id=540101",
+    "https://namu.wiki/w/%EC%8B%B8%EC%9D%B4",
+    "https://ko.wikipedia.org/wiki/%EC%B9%A0%EC%A7%91%EC%8B%B8%EC%9D%B4%EB%8B%A4",
+    "http://www.fnnews.com/news/201403101740327162",
+    "http://www.nocutnews.co.kr/news/1146424",
+    "http://www.aktv.co.kr/news/articleView.html?idxno=11866",
+    "http://www.etnews.com/20151103000362",
+    "http://m.blog.naver.com/hsjeong0516/221002644128",
+    "http://www.joongboo.com/news/articleView.html?idxno=1117547",
+    "http://www.ytn.co.kr/_ln/0117_201512191028534683",
+    "http://tenasia.hankyung.com/archives/1496314",
+    "https://web.stagram.com/tag/%EC%8B%B8%EC%9D%B4%EC%BB%B4%EB%B0%B1",
+    "http://grandpassion.tistory.com/711",
+    "http://muykr.tistory.com/8",
+    "http://www.newspim.com/news/view/20151103000197",
+    "http://www.ijnews.net/news/articleView.html?idxno=3241",
+    "http://www.hani.co.kr/arti/science/science_general/532746.html",
+    "https://ko.wikipedia.org/wiki/%EA%B8%80%EB%A3%A8%ED%83%90%EC%82%B0_%EB%82%98%ED%8A%B8%EB%A5%A8",
+    "http://www.newsis.com/view?id=NISX20150512_0013656913",
+    "https://glutamate.org/ko/%EA%B8%80%EB%A3%A8%ED%83%80%EB%AF%BC%EC%82%B0%EC%97%BC%EC%97%90-%EB%8C%80%ED%95%B4/",
+    "http://www.koreatimes.com/article/206164",
+    "http://www.iadi.or.kr/news/articleView.html?idxno=1019",
+    "http://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0001487424",
+    "http://au-naturel.tistory.com/48",
+    "http://m.blog.naver.com/realize66/30028158472",
+    "http://blog.koreadaily.com/byunghee/944800",
+    "http://bbs.ichannela.com/ch/mboard.cha?tcode=xfile&work=view&no=1973&cmt_p_page=2",
+    "https://www.clien.net/service/board/park/3406213",
+    "https://www.vanchosun.com/news/main/market_detail.php?main=life2&boardId=36&bdId=42030&cpage1=16",
+    "https://www.huffingtonpost.kr/2014/05/20/story_n_5350127.html",
+    "http://expedia.tistory.com/41",
+    "https://www.skyscanner.co.kr/news/10-best-way-to-enjoy-bangkok",
+    "http://gotrip56.com/bangkoktraveltop10/",
+    "https://www.tripadvisor.co.kr/Attractions-g293916-Activities-Bangkok.html",
+    "https://www.booking.com/landmark/th/grand-palace.ko.html",
+    "https://www.voakorea.com/a/2921203.html",
+    "https://kr.hotels.com/de1313946-ah/travel-guides-bangkog-taegug/",
+    "https://ko.wikipedia.org/wiki/%EB%B0%A9%EC%BD%95",
+    "http://tour.interpark.com/freeya/Discovery/View.aspx?seq=11446",
+    "https://thai.monkeytravel.com/user/board/board_view.php?code=food&mfcode=&idx=389427",
+    "https://brunch.co.kr/@allstay/770",
+    "https://www.herenow.city/ko/bangkok/venue/",
+    "https://www.facebook.com/media/set/?set=a.414389408689630.1073741841.345071648954740&type=3",
+    "http://the-bangkok-cha-cha-suite.bangkokshotels.com/ko/",
+    "https://www.tranghotelbangkok.com/ko-kr/attractions",
+    "https://realguidebook.com/bangkok-attraction-exciting/"
+];
 
 let count = 0,
     DomData = [],
-    Files = [];
+    Files = [],
+    midPoint = 48;
 
 function stringifyDOM(filenames, tab) {
     Files.push(filenames);
     console.log(Files);
+    exportScreenshot(count);
 
     chrome.tabs.sendMessage(tab.id, {msg: 'stringifyDOM'}, function() {
+        exportDOM(count-1);
     });
 }
 
@@ -82,13 +119,7 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
 });
 
 function contains(url) {
-    let segmented = url.replace(/^https?:\/\//, '').split(","),
-        core = segmented[0];
-    
-    if (core == "m" || core == "www")
-        core = segmented[1];
-
-    return urls[count].includes(core);
+    return url.includes("http");
 }
 
 function errorHandler(reason) {
@@ -96,27 +127,27 @@ function errorHandler(reason) {
 }
 
 function getFilename() {
-    return 'screencapture' + '-' + count + '.png';
+    return 'screencapture' + '-' + (count + midPoint) + '.png';
 }
 
-function exportData() {
-
+function exportDOM(i) {
     // export dom data
-    DomData.forEach(function(val, i) {
+    var val = DomData[i];
 
+    if (val) {
         var blob = new Blob([val], {type: "text/plain; charset=UTF-8"});
 
-        var filename = i + ".txt";
+        var filename = (i + midPoint) + ".txt";
         var size = blob.size + (1024 / 2);
         var reqFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
-
+    
         function onwriteend() {
             // open the file that now contains the blob - calling
             // `openPage` again if we had to split up the image
             var urlName = ('filesystem:chrome-extension://' +
-                           chrome.i18n.getMessage('@@extension_id') +
-                           '/temporary/' + filename);
-
+                            chrome.i18n.getMessage('@@extension_id') +
+                            '/temporary/' + filename);
+    
             chrome.downloads.download({
                 url: urlName,
                 conflictAction : 'uniquify',
@@ -132,16 +163,36 @@ function exportData() {
                 }, errorHandler); // TODO - standardize error callbacks?
             }, errorHandler);
         }, errorHandler);
+    }
+}
+
+function exportScreenshot(i) {
+
+    // export the screenshot files
+    var fileVal = Files[i];
+
+    if (fileVal) {
+        chrome.downloads.download({
+            url: fileVal[0],
+            conflictAction : 'uniquify',
+            saveAs: false
+        });
+    }
+    
+}
+
+function exportData() {
+
+    // export dom data
+    DomData.forEach(function(val, i) {
+
+        expoertDom(i);
 
     });
 
     // export the screenshot files
     Files.forEach(function(file, i) {
-        chrome.downloads.download({
-            url: file[0],
-            conflictAction : 'uniquify',
-            saveAs: false
-        });
+        exportScreenshot(i);
     }, function() {
         alert("COMPLETE");
     });
@@ -155,7 +206,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         sendResponse({success: true});
         console.log(DomData);
 
-        if (count == (urls.length - 1)) {
+        if (DomData.length == urls.length) {
             exportData();
             return;
         }
